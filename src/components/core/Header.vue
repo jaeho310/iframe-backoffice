@@ -4,7 +4,12 @@
       dense
       dark
     >
-      <ul class="menu">
+      <v-tabs align-with-title v-model="activeTab">
+        <v-tab v-for="tab of tabs" :key="tab.id" @click="tabClick(tab.id)">
+          {{tab.name}}
+        </v-tab>
+      </v-tabs>
+      <!-- <ul class="menu">
         <li>
           <v-btn
           @click="toHome"
@@ -26,7 +31,7 @@
           setting
           </v-btn>
         </li>
-      </ul>
+      </ul> -->
     </v-app-bar>
   </div>
 </template>
@@ -35,14 +40,30 @@
 export default {
   data() {
     return {
-      path: ''
+      path: '',
+      activeTab: 0,
+      tabs: [
+        { id: 0, name: 'HOME' },
+        { id: 1, name: 'STATUS' },
+        { id: 2, name: 'SETTING' }
+      ]
     }
   },
   methods: {
+    tabClick(id) {
+      if (id == 0) {
+        this.toHome()
+      } else if (id == 1) {
+        this.toStatus()
+      } else if (id == 2) {
+        this.toSetting()
+      }
+    },
     toStatus() {
       this.path = 'status'
       let currentPath = this.getCurrentPath()
       if (this.path == currentPath) {
+        this.activeTab = 2
         location.reload()
       } else {
         this.$router.push("/status")
@@ -72,8 +93,22 @@ export default {
       console.log(pathObj)
       console.log(pathObj[key])
       return pathObj[key]
+    },
+    checkTabId() {
+      let currentPath = this.getCurrentPath()
+      if (currentPath == '') {
+        this.activeTab = 0
+      } else if (currentPath == 'status') {
+        this.activeTab = 1
+      } else if (currentPath == 'setting') {
+        this.activeTab = 2
+      }
+      console.log(this.activeTab)
     }
   },
+  mounted() {
+    this.checkTabId()
+  }
 }
 </script>
 
