@@ -1,8 +1,8 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Home from '@/components/view/Home'
-import STATUS from '@/components/view/Status'
-import SETTING from '@/components/view/Setting'
+import Home from '@/components/views/Home'
+import STATUS from '@/components/views/Status'
+import SETTING from '@/components/views/Setting'
 
 Vue.use(Router); // vue 라우터 사용
 

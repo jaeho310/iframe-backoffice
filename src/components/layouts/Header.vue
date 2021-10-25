@@ -9,29 +9,6 @@
           {{tab.name}}
         </v-tab>
       </v-tabs>
-      <!-- <ul class="menu">
-        <li>
-          <v-btn
-          @click="toHome"
-          >
-          home
-          </v-btn>
-        </li>
-        <li>
-          <v-btn
-          @click="toStatus"
-          >
-          status
-          </v-btn>
-        </li>
-        <li>
-          <v-btn
-          @click="toSetting"
-          >
-          setting
-          </v-btn>
-        </li>
-      </ul> -->
     </v-app-bar>
   </div>
 </template>
@@ -113,5 +90,4 @@ export default {
 </script>
 
 <style>
-  ul.menu li{ display: inline;}
 </style>

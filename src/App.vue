@@ -1,17 +1,13 @@
 <template>
-  <v-app>
-    <Header />
-    <router-view />
-  </v-app>
+  <Index />
 </template>
-
 <script>
-import Header from '@/components/core/Header.vue';
+import Index from '@/components/layouts/Index';
 export default {
   name: 'App',
   components: {
-    Header
-  },
+    Index
+  }
 };
 </script>
 <style>
