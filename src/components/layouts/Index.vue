@@ -1,17 +1,17 @@
 <template>
-  <v-main>
-    <Header />
-    <View />
-  </v-main>
+  <v-app>
+    <CoreHeader />
+    <CoreView />
+  </v-app>
 </template>
 <script>
 
-import Header from '@/components/layouts/Header.vue';
-import View from '@/components/layouts/View.vue';
+import CoreHeader from '@/components/layouts/Header.vue';
+import CoreView from '@/components/layouts/View.vue';
 export default {
   components: {
-    Header,
-    View
+    CoreHeader,
+    CoreView
   },
 }
 </script>

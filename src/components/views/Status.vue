@@ -1,5 +1,5 @@
 <template>
-  <iframe src="http://localhost:8086/status" height="100%"></iframe>
+  <iframe src="http://192.168.105.33:8086/status" height="100%"></iframe>
 </template>
 
 <script>
