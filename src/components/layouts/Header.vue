@@ -67,8 +67,8 @@ export default {
     getCurrentPath() {
       let pathObj = window.location.href.split('/')
       let key = Object.keys(pathObj).length - 1
-      console.log(pathObj)
-      console.log(pathObj[key])
+      // console.log(pathObj)
+      // console.log(pathObj[key])
       return pathObj[key]
     },
     checkTabId() {
@@ -80,7 +80,6 @@ export default {
       } else if (currentPath == 'setting') {
         this.activeTab = 2
       }
-      console.log(this.activeTab)
     }
   },
   mounted() {
